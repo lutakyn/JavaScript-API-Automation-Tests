@@ -59,7 +59,7 @@ describe('Users', () => {
     };
 
     return request
-      .put('users/132')
+      .put('users/3663')
       .set('Authorization', `Bearer ${TOKEN}`)
       .send(data)
       .then((res) => {
@@ -70,7 +70,7 @@ describe('Users', () => {
 
   it('DELETE /users/:id', () => {
     return request
-      .delete('users/21')
+      .delete('users/3663')
       .set('Authorization', `Bearer ${TOKEN}`)
       .then((res) => {
         console.log(res.body);
