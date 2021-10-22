@@ -4,7 +4,7 @@ const request = supertest('https://gorest.co.in/public-api/');
 import { expect } from 'chai';
 
 const TOKEN = process.env.USER_TOKEN;
-console.log("token",TOKEN)
+//console.log("token",TOKEN)
 
 describe('Users', () => {
   let userId;
