@@ -14,8 +14,7 @@ export const getUsers = async () => {
 
   const res = await request
     .get(`users`)
-    .set('Authorization', `Bearer ${TOKEN}`)
-    .send(data);
+    .set('Authorization', `Bearer ${TOKEN}`);
 
   return res.body.data;
 };
