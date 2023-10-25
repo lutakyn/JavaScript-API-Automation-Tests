@@ -1,19 +1,19 @@
 const supertest = require('supertest');
-const request = supertest('https://gorest.co.in/public-api/');
+const request = supertest('https://gorest.co.in/public-api/v2/');
 const faker = require('faker');
 
 const TOKEN = process.env.USER_TOKEN;
 
-export const createRandomUserWithFaker = async () => {
-  const data = {
-    email: faker.internet.email(),
-    name: faker.name.firstName(),
-    status: 'Active',
-    gender: 'Male',
-  };
+export const getUsers = async () => {
+  // const data = {
+  //   email: faker.internet.email(),
+  //   name: faker.name.firstName(),
+  //   status: 'Active',
+  //   gender: 'Male',
+  // };
 
   const res = await request
-    .post(`users`)
+    .get(`users`)
     .set('Authorization', `Bearer ${TOKEN}`)
     .send(data);
 
