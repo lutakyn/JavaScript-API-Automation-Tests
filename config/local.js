@@ -1,3 +1,3 @@
 export default {
-  baseUrl: 'https://gorest.co.in/public-api/',
+  baseUrl: 'https://gorest.co.in/public-api/v2',
 };
