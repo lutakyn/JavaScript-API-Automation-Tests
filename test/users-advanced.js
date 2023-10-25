@@ -1,5 +1,5 @@
 import supertest from 'supertest';
-const request = supertest('https://gorest.co.in/public-api/');
+const request = supertest('https://gorest.co.in/public-api/v2/');
 
 import { expect } from 'chai';
 
