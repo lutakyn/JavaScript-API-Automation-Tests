@@ -4,17 +4,18 @@ const faker = require('faker');
 
 const TOKEN = process.env.USER_TOKEN;
 
-export const getUsers = async () => {
-  // const data = {
-  //   email: faker.internet.email(),
-  //   name: faker.name.firstName(),
-  //   status: 'Active',
-  //   gender: 'Male',
-  // };
+export const createRandomUserWithFaker = async () => {
+  const data = {
+    email: faker.internet.email(),
+    name: faker.name.firstName(),
+    status: 'Active',
+    gender: 'Male',
+  };
 
   const res = await request
-    .get(`users`)
-    .set('Authorization', `Bearer ${TOKEN}`);
+    .post(`users`)
+    .set('Authorization', `Bearer ${TOKEN}`)
+    .send(data);
 
   return res.body.data;
 };
